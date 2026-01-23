@@ -10,7 +10,7 @@
     },
     {
       "id": 2,
-      "author": "Jane Smith",
+      "author": "Jane baba",
       "publisher": "Blue Horizon",
       "coverImg": "https://picsum.photos/200/300?random=2",
       "date": "05/06/2020",
@@ -34,7 +34,7 @@
     },
     {
       "id": 5,
-      "author": "Robert Wilson",
+      "author": "Robert MC",
       "publisher": "Starline Publishing",
       "coverImg": "https://picsum.photos/200/300?random=5",
       "date": "01/09/2018",
@@ -79,6 +79,22 @@
       "coverImg": "https://picsum.photos/200/300?random=10",
       "date": "11/01/2021",
       "overview": "A suspenseful crime story full of unexpected twists."
+    },
+    {
+      "author": "alsdflasdf",
+      "publisher": "Blue Horizon",
+      "coverImg": "https://picsum.photos/200/300?random=2",
+      "date": "05/06/2020",
+      "overview": "asdf",
+      "id": 11
+    },
+    {
+      "author": "Jane Smith",
+      "publisher": "Blue Horizon",
+      "coverImg": "https://picsum.photos/200/300?random=2",
+      "date": "05/06/2020",
+      "overview": ";alsdf",
+      "id": 12
     }
   ]
 }

@@ -3,7 +3,6 @@ import { BsTextParagraph } from "react-icons/bs";
 import { CgFeed } from "react-icons/cg";
 
 const TextArea = (props) => {
-  console.log(props);
   return (
     <div className="flex w-full flex-col">
       <label className="text-sm">{props.label}</label>
@@ -15,7 +14,7 @@ const TextArea = (props) => {
         name={props.name}
         onChange={props.onChange}
         placeholder="Enter para"
-        className="w-full rounded-md border-2 border-gray-300 p-3 outline-none"
+        className="w-full rounded-md border-2 border-gray-300 bg-[#f5f5f5] p-3 outline-none"
       />
       {/* </div> */}
       <p className="h-4 text-[10px]">{props.error}</p>

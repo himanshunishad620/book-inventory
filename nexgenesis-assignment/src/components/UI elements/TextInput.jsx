@@ -15,7 +15,7 @@ const TextInput = (props) => {
           name={props.name}
           onChange={props.onChange}
           placeholder={props.placeholder}
-          className="h-10 w-full rounded-md border-2 border-gray-300 px-10 outline-none"
+          className="h-10 w-full rounded-md border-2 border-gray-300 bg-[#f5f5f5] px-10 outline-none"
         />
       </div>
       <p className="h-4 text-[10px]">{props.error}</p>

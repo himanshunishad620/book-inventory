@@ -7,8 +7,10 @@ import Button from "../components/UI elements/Button";
 import useHandleForm from "../hooks/useHandleForm";
 import { CgLayoutGrid } from "react-icons/cg";
 import DateInput from "../components/UI elements/DateInput";
+import { useAddBookMutation } from "../api/booksApi";
 
 const AddBook = () => {
+  const [addBook, { isLoading }] = useAddBookMutation();
   const { handleChange, error, values, validate } = useHandleForm({
     author: undefined,
     publisher: undefined,
@@ -16,10 +18,15 @@ const AddBook = () => {
     date: undefined,
     overview: undefined,
   });
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validate()) return;
-    alert("H");
+    try {
+      await addBook(values).unwrap();
+      console.log("Add");
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <div className="flex h-full w-full flex-col items-center justify-center gap-5 bg-white">
@@ -60,6 +67,7 @@ const AddBook = () => {
             value={values.date}
             name="date"
             error={error.date}
+            placeholder="e.g. dd/mm/yyyy"
             onChange={handleChange}
           />
         </div>

@@ -8,11 +8,16 @@ import useHandleForm from "../hooks/useHandleForm";
 import { CgLayoutGrid } from "react-icons/cg";
 import DateInput from "../components/UI elements/DateInput";
 import { useParams } from "react-router-dom";
-import { useGetBookQuery } from "../api/booksApi";
+import { useGetBookQuery, useUpdateBookMutation } from "../api/booksApi";
 
 const EditBook = () => {
   const { bookid } = useParams();
-  const { data: book, isLoading, isError } = useGetBookQuery(bookid);
+  const {
+    data: book,
+    isLoading: isBookLoading,
+    isError,
+  } = useGetBookQuery(bookid);
+  const [updateBook, { data, isLoading }] = useUpdateBookMutation();
   const { handleChange, error, values, updateValues, validate } = useHandleForm(
     {
       author: "",
@@ -22,10 +27,15 @@ const EditBook = () => {
       overview: "",
     },
   );
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validate()) return;
-    alert("H");
+    try {
+      await updateBook(values).unwrap();
+      console.log("Updated");
+    } catch (err) {
+      console.log(err);
+    }
   };
   useEffect(() => {
     if (book) updateValues(book);
@@ -41,14 +51,14 @@ const EditBook = () => {
         <div className="flex w-full flex-col justify-between gap-0 md:flex-row md:gap-3">
           <TextInput
             placeholder="e.g. John Doe"
-            value={isLoading ? "Loading..." : values.author}
+            value={isBookLoading ? "Loading..." : values.author}
             name="author"
             error={error.author}
             onChange={handleChange}
             label="Author"
           />
           <TextInput
-            value={isLoading ? "Loading..." : values.publisher}
+            value={isBookLoading ? "Loading..." : values.publisher}
             placeholder="e.g. Abc publication"
             name="publisher"
             label="Publisher"
@@ -58,7 +68,7 @@ const EditBook = () => {
         </div>
         <div className="flex w-full flex-col justify-between gap-0 md:flex-row md:gap-3">
           <TextInput
-            value={isLoading ? "Loading..." : values.coverImg}
+            value={isBookLoading ? "Loading..." : values.coverImg}
             onChange={handleChange}
             error={error.coverImg}
             placeholder="e.g. http://youpic.com"
@@ -67,7 +77,7 @@ const EditBook = () => {
           />
           <DateInput
             label="Date"
-            value={isLoading ? "Loading..." : values.date}
+            value={isBookLoading ? "Loading..." : values.date}
             name="date"
             error={error.date}
             onChange={handleChange}
@@ -76,7 +86,7 @@ const EditBook = () => {
         <TextArea
           label="Overview"
           name="overview"
-          value={isLoading ? "Loading..." : values.overview}
+          value={isBookLoading ? "Loading..." : values.overview}
           error={error.overview}
           onChange={handleChange}
         />
