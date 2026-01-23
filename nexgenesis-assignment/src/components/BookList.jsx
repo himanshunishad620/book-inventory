@@ -3,42 +3,61 @@ import { useGetBooksQuery } from "../api/booksApi";
 import BookItem from "./BookItem";
 import { Link } from "react-router-dom";
 import SearchInput from "./UI elements/SearchInput";
+import { useMemo, useState } from "react";
 
 const BookList = () => {
-  const { data } = useGetBooksQuery();
+  const { data, isLoading } = useGetBooksQuery();
+  const [query, setQuery] = useState("");
+
+  const filteredBooks = useMemo(() => {
+    if (!data) return [];
+    if (!query.trim()) return data;
+
+    const q = query.toLowerCase();
+    return data.filter(
+      (book) =>
+        book.author.toLowerCase().includes(q) ||
+        book.publisher.toLowerCase().includes(q),
+    );
+  }, [data, query]);
+
+  const handleChange = (e) => {
+    setQuery(e.target.value);
+  };
   return (
     <div className="no-scrollbar h-screen w-full">
       <div className="flex h-1/11 items-center justify-between px-4">
-        <SearchInput placeholder="jd" />
+        <SearchInput
+          placeholder="Search by author or publisher..."
+          value={query}
+          onChange={handleChange}
+        />
         <Link to="/add">
           <Button text="Add Book" />
         </Link>
       </div>
+
       <div className="h-9/10 overflow-y-scroll">
-        {data && (
+        {isLoading && <p className="text-3xl text-red-600">Loading...</p>}
+
+        {!isLoading && filteredBooks.length === 0 && (
+          <p className="p-4 text-center text-gray-500">No books found</p>
+        )}
+
+        {filteredBooks.length > 0 && (
           <table className="w-full border-collapse">
             <thead className="sticky top-0 bg-[#624DE3]">
               <tr>
-                <th className="p-2 text-center font-medium text-white">
-                  Cover
-                </th>
-                <th className="p-2 text-center font-medium text-white">
-                  Author
-                </th>
-                <th className="p-2 text-center font-medium text-white">
-                  Published
-                </th>
-                <th className="p-2 text-center font-medium text-white">
-                  Publisher
-                </th>
-                <th className="p-2 text-center font-medium text-white">
-                  Actions
-                </th>
+                <th className="p-2 text-center text-white">Cover</th>
+                <th className="p-2 text-center text-white">Author</th>
+                <th className="p-2 text-center text-white">Published</th>
+                <th className="p-2 text-center text-white">Publisher</th>
+                <th className="p-2 text-center text-white">Actions</th>
               </tr>
             </thead>
             <tbody>
-              {data.map((book, ind) => (
-                <BookItem key={ind} {...book} />
+              {filteredBooks.map((book) => (
+                <BookItem key={book.id} {...book} />
               ))}
             </tbody>
           </table>

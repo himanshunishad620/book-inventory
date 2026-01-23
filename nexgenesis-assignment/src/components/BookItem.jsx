@@ -4,6 +4,7 @@ import { FiEdit } from "react-icons/fi";
 import { LuTrash2 } from "react-icons/lu";
 import { useRemoveBookMutation } from "../api/booksApi";
 import { Link, useNavigate } from "react-router-dom";
+import { formatMonthYear } from "../helper/date";
 
 const BookItem = (book) => {
   const [removeBook, { isLoading }] = useRemoveBookMutation();
@@ -41,7 +42,7 @@ const BookItem = (book) => {
         onClick={handleClick}
         className="max-w-20 cursor-pointer truncate p-0.5 text-center text-sm"
       >
-        {book.date}
+        {formatMonthYear(book.date)}
       </td>
       <td
         onClick={handleClick}

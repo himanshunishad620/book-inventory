@@ -1,40 +1,42 @@
-import React from "react";
 import TextInput from "../components/UI elements/TextInput";
-import YearInput from "../components/UI elements/DateInput";
 import TextArea from "../components/UI elements/TextArea";
 import Title from "../components/UI elements/Title";
 import Button from "../components/UI elements/Button";
 import useHandleForm from "../hooks/useHandleForm";
-import { CgLayoutGrid } from "react-icons/cg";
 import DateInput from "../components/UI elements/DateInput";
 import { useAddBookMutation } from "../api/booksApi";
-
+import { toast } from "react-toastify";
+const initialValues = {
+  author: undefined,
+  publisher: undefined,
+  coverImg: undefined,
+  date: undefined,
+  overview: undefined,
+};
 const AddBook = () => {
   const [addBook, { isLoading }] = useAddBookMutation();
-  const { handleChange, error, values, validate } = useHandleForm({
-    author: undefined,
-    publisher: undefined,
-    coverImg: undefined,
-    date: undefined,
-    overview: undefined,
-  });
+  const { handleChange, error, values, validate } =
+    useHandleForm(initialValues);
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!validate()) return;
+    if (!validate()) {
+      toast.error("Values cannot be empty!");
+      return;
+    }
     try {
       await addBook(values).unwrap();
-      console.log("Add");
+      toast.success("Book Added Successfuly!");
     } catch (error) {
-      console.log(error);
+      toast.error("Unable to process the request!");
     }
   };
   return (
     <div className="flex h-full w-full flex-col items-center justify-center gap-5 bg-white">
-      <Title text="Add Book" />
       <form
         onSubmit={handleSubmit}
         className="w-9/10 rounded-xl border-2 border-gray-300 p-5 md:w-4/5 md:p-10"
       >
+        <Title text="Add Book" />
         <div className="flex w-full flex-col justify-between gap-0 md:flex-row md:gap-3">
           <TextInput
             placeholder="e.g. John Doe"
@@ -79,7 +81,7 @@ const AddBook = () => {
           onChange={handleChange}
         />
         <div className="my-2">
-          <Button text={"Submit"} />
+          <Button text={"Submit"} disabled={isLoading} isLoading={false} />
         </div>
       </form>
     </div>

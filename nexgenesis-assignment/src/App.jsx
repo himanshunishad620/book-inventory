@@ -1,3 +1,4 @@
+import { ToastContainer } from "react-toastify";
 import Home from "./pages/Home";
 import AppRoutes from "./router/AppRoutes";
 
@@ -7,6 +8,7 @@ const App = () => {
       <div className="w-full md:w-3/5">
         <AppRoutes />
       </div>
+      <ToastContainer />
     </div>
   );
   // return <Home />;

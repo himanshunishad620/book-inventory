@@ -4,7 +4,7 @@
       "id": 1,
       "author": "John Doe",
       "publisher": "Sunrise Publications",
-      "coverImg": "https://picsum.photos/200/300?random=1",
+      "coverImg": "/book.jpg",
       "date": "12/03/2021",
       "overview": "An inspiring journey of self-discovery and courage."
     },
@@ -12,23 +12,15 @@
       "id": 2,
       "author": "Jane baba",
       "publisher": "Blue Horizon",
-      "coverImg": "https://picsum.photos/200/300?random=2",
+      "coverImg": "/book.jpg",
       "date": "05/06/2020",
       "overview": "A thrilling mystery that keeps readers on the edge."
-    },
-    {
-      "id": 3,
-      "author": "Michael Johnson",
-      "publisher": "Golden Leaf Press",
-      "coverImg": "https://picsum.photos/200/300?random=3",
-      "date": "23/11/2019",
-      "overview": "A heartfelt story of love, loss, and redemption."
     },
     {
       "id": 4,
       "author": "Emily Davis",
       "publisher": "Aurora Books",
-      "coverImg": "https://picsum.photos/200/300?random=4",
+      "coverImg": "/book.jpg",
       "date": "14/02/2022",
       "overview": "A captivating fantasy world full of magic and adventure."
     },
@@ -36,7 +28,7 @@
       "id": 5,
       "author": "Robert MC",
       "publisher": "Starline Publishing",
-      "coverImg": "https://picsum.photos/200/300?random=5",
+      "coverImg": "/book.jpg",
       "date": "01/09/2018",
       "overview": "An investigative thriller that unravels dark secrets."
     },
@@ -44,7 +36,7 @@
       "id": 6,
       "author": "Sophia Martinez",
       "publisher": "Evergreen Press",
-      "coverImg": "https://picsum.photos/200/300?random=6",
+      "coverImg": "/book.jpg",
       "date": "30/07/2021",
       "overview": "A guide to mindfulness and living a peaceful life."
     },
@@ -52,7 +44,7 @@
       "id": 7,
       "author": "Daniel Brown",
       "publisher": "Lighthouse Books",
-      "coverImg": "https://picsum.photos/200/300?random=7",
+      "coverImg": "/book.jpg",
       "date": "19/04/2020",
       "overview": "A gripping historical drama set in the 19th century."
     },
@@ -60,7 +52,7 @@
       "id": 8,
       "author": "Olivia Taylor",
       "publisher": "Sunflower Publications",
-      "coverImg": "https://picsum.photos/200/300?random=8",
+      "coverImg": "/book.jpg",
       "date": "08/12/2019",
       "overview": "A heartwarming story of friendship and courage."
     },
@@ -68,7 +60,7 @@
       "id": 9,
       "author": "William Anderson",
       "publisher": "Moonlight Press",
-      "coverImg": "https://picsum.photos/200/300?random=9",
+      "coverImg": "/book.jpg",
       "date": "27/08/2022",
       "overview": "A science fiction epic with interstellar adventures."
     },
@@ -76,24 +68,24 @@
       "id": 10,
       "author": "Emma Thomas",
       "publisher": "Crystal Books",
-      "coverImg": "https://picsum.photos/200/300?random=10",
+      "coverImg": "/book.jpg",
       "date": "11/01/2021",
       "overview": "A suspenseful crime story full of unexpected twists."
     },
     {
-      "author": "alsdflasdf",
-      "publisher": "Blue Horizon",
-      "coverImg": "https://picsum.photos/200/300?random=2",
-      "date": "05/06/2020",
-      "overview": "asdf",
+      "author": "Himanshu",
+      "publisher": "Nishad",
+      "coverImg": "/book.jpg",
+      "date": "03/04/2003",
+      "overview": "Hello",
       "id": 11
     },
     {
-      "author": "Jane Smith",
-      "publisher": "Blue Horizon",
-      "coverImg": "https://picsum.photos/200/300?random=2",
-      "date": "05/06/2020",
-      "overview": ";alsdf",
+      "author": "Himanshu Nishad",
+      "publisher": "Nishad",
+      "coverImg": "/book.jpg",
+      "date": "03/04/2003",
+      "overview": "Hello",
       "id": 12
     }
   ]

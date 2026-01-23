@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { isValidDate } from "../helper/date";
 
 export default function useHandleForm(initialValues) {
   const [values, setValues] = useState(initialValues);
@@ -9,13 +10,15 @@ export default function useHandleForm(initialValues) {
         (value) => value === undefined || value === null,
       )
     ) {
-      console.log("False");
       return false;
     }
 
     return Object.values(error).every((value) => value === "");
   };
-  const updateValues = (values) => setValues(values);
+  const updateValues = (values) => {
+    setValues(values);
+    console.log(values);
+  };
   const handleChange = (e) => {
     setValues((pre) => ({ ...pre, [e.target.name]: e.target.value }));
     switch (e.target.name) {
@@ -35,7 +38,7 @@ export default function useHandleForm(initialValues) {
         else setError((pre) => ({ ...pre, overview: "" }));
         break;
       case "date":
-        if (!/^\d{2}\/\d{2}\/\d{4}$/.test(e.target.value.trim()))
+        if (!isValidDate(e.target.value.trim()))
           setError((pre) => ({ ...pre, date: "Invalid Date!" }));
         else setError((pre) => ({ ...pre, date: "" }));
         break;
