@@ -5,6 +5,10 @@ export const isValidDate = (dateStr) => {
 
   const [day, month, year] = dateStr.split("/").map(Number);
 
+  const currentYear = new Date().getFullYear();
+
+  if (year > currentYear) return false;
+
   const date = new Date(year, month - 1, day);
 
   return (
@@ -13,6 +17,7 @@ export const isValidDate = (dateStr) => {
     date.getDate() === day
   );
 };
+
 export const formatMonthYear = (dateStr) => {
   if (!dateStr) return "";
 

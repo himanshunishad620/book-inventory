@@ -1,8 +1,3 @@
-import React from "react";
-import { BsCalendar2Month } from "react-icons/bs";
-import { FaRegCalendar } from "react-icons/fa";
-import { FiEdit } from "react-icons/fi";
-import { LuTextCursorInput } from "react-icons/lu";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 
 const DateInput = (props) => {

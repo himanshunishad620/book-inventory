@@ -1,9 +1,6 @@
-import React from "react";
-import { FiEdit } from "react-icons/fi";
 import { LuTextCursorInput } from "react-icons/lu";
 
 const TextInput = (props) => {
-  const err = "Please enter valid details";
   return (
     <div className="w-full">
       <label className="text-sm font-medium text-gray-500">{props.label}</label>

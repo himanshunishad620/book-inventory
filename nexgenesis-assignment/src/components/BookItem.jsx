@@ -1,31 +1,29 @@
-import React from "react";
 import IconButton from "./UI elements/IconButton";
 import { FiEdit } from "react-icons/fi";
 import { LuTrash2 } from "react-icons/lu";
 import { useRemoveBookMutation } from "../api/booksApi";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { formatMonthYear } from "../helper/date";
+import { toast } from "react-toastify";
 
 const BookItem = (book) => {
-  const [removeBook, { isLoading }] = useRemoveBookMutation();
+  const [removeBook] = useRemoveBookMutation();
   const navigate = useNavigate();
-  const handleClick = (e) => {
-    navigate(`book/${book.id}`);
-  };
-  const handleEdit = (e) => {
-    navigate(`edit/${book.id}`);
-  };
-  const handleRemoveBook = async (e) => {
+
+  const handleClick = () => navigate(`book/${book.id}`);
+  const handleEdit = () => navigate(`edit/${book.id}`);
+
+  const handleRemoveBook = async () => {
     try {
-      const res = await removeBook(book.id).unwrap();
-      console.log(res);
+      await removeBook(book.id).unwrap();
+      toast.success("Book Removed Successfuly!");
     } catch (error) {
-      console.log(error);
+      toast.error("Unable to proess request!");
     }
   };
+
   return (
     <tr className="border-b border-gray-300 even:bg-[#F7F6FE]">
-      {/* <Link to={`book/${book.id}`} className="w-full"> */}
       <td
         onClick={handleClick}
         className="flex cursor-pointer items-center justify-center"
@@ -62,7 +60,6 @@ const BookItem = (book) => {
           />
         </div>
       </td>
-      {/* </Link> */}
     </tr>
   );
 };

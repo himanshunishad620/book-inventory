@@ -17,6 +17,7 @@ const AddBook = () => {
   const [addBook, { isLoading }] = useAddBookMutation();
   const { handleChange, error, values, validate } =
     useHandleForm(initialValues);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validate()) {
@@ -30,6 +31,7 @@ const AddBook = () => {
       toast.error("Unable to process the request!");
     }
   };
+
   return (
     <div className="flex h-full w-full flex-col items-center justify-center gap-5 bg-white">
       <form

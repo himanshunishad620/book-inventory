@@ -67,18 +67,10 @@
     {
       "id": 10,
       "author": "Emma Thomas",
-      "publisher": "Crystal Books",
       "coverImg": "/book.jpg",
+      "publisher": "Crystal Books",
       "date": "11/01/2021",
       "overview": "A suspenseful crime story full of unexpected twists."
-    },
-    {
-      "author": "Himanshu",
-      "publisher": "Nishad",
-      "coverImg": "/book.jpg",
-      "date": "03/04/2003",
-      "overview": "Hello",
-      "id": 11
     },
     {
       "author": "Himanshu Nishad",

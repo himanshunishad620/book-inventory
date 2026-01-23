@@ -4,6 +4,9 @@ import { isValidDate } from "../helper/date";
 export default function useHandleForm(initialValues) {
   const [values, setValues] = useState(initialValues);
   const [error, setError] = useState(initialValues);
+
+  const updateValues = (values) => setValues(values);
+
   const validate = () => {
     if (
       Object.values(error).every(
@@ -12,13 +15,9 @@ export default function useHandleForm(initialValues) {
     ) {
       return false;
     }
-
     return Object.values(error).every((value) => value === "");
   };
-  const updateValues = (values) => {
-    setValues(values);
-    console.log(values);
-  };
+
   const handleChange = (e) => {
     setValues((pre) => ({ ...pre, [e.target.name]: e.target.value }));
     switch (e.target.name) {
@@ -27,21 +26,25 @@ export default function useHandleForm(initialValues) {
           setError((pre) => ({ ...pre, author: "Author is required!" }));
         else setError((pre) => ({ ...pre, author: "" }));
         break;
+
       case "publisher":
         if (!e.target.value.trim())
           setError((pre) => ({ ...pre, publisher: "Publisher is required!" }));
         else setError((pre) => ({ ...pre, publisher: "" }));
         break;
+
       case "overview":
         if (!e.target.value.trim())
           setError((pre) => ({ ...pre, overview: "Overview is required!" }));
         else setError((pre) => ({ ...pre, overview: "" }));
         break;
+
       case "date":
         if (!isValidDate(e.target.value.trim()))
           setError((pre) => ({ ...pre, date: "Invalid Date!" }));
         else setError((pre) => ({ ...pre, date: "" }));
         break;
+
       case "coverImg":
         if (!/^(http|https):\/\/[^ "]+$/.test(e.target.value))
           setError((pre) => ({ ...pre, coverImg: "Invalid url!" }));

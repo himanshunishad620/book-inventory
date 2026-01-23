@@ -9,6 +9,8 @@ const BookList = () => {
   const { data, isLoading } = useGetBooksQuery();
   const [query, setQuery] = useState("");
 
+  const handleChange = (e) => setQuery(e.target.value);
+
   const filteredBooks = useMemo(() => {
     if (!data) return [];
     if (!query.trim()) return data;
@@ -21,9 +23,6 @@ const BookList = () => {
     );
   }, [data, query]);
 
-  const handleChange = (e) => {
-    setQuery(e.target.value);
-  };
   return (
     <div className="no-scrollbar h-screen w-full">
       <div className="flex h-1/11 items-center justify-between px-4">
@@ -39,7 +38,6 @@ const BookList = () => {
 
       <div className="h-9/10 overflow-y-scroll">
         {isLoading && <p className="text-3xl text-red-600">Loading...</p>}
-
         {!isLoading && filteredBooks.length === 0 && (
           <p className="p-4 text-center text-gray-500">No books found</p>
         )}

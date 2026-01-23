@@ -1,11 +1,9 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import TextInput from "../components/UI elements/TextInput";
-import YearInput from "../components/UI elements/DateInput";
 import TextArea from "../components/UI elements/TextArea";
 import Title from "../components/UI elements/Title";
 import Button from "../components/UI elements/Button";
 import useHandleForm from "../hooks/useHandleForm";
-import { CgLayoutGrid } from "react-icons/cg";
 import DateInput from "../components/UI elements/DateInput";
 import { useParams } from "react-router-dom";
 import { useGetBookQuery, useUpdateBookMutation } from "../api/booksApi";
@@ -103,17 +101,3 @@ const EditBook = () => {
 };
 
 export default EditBook;
-
-// import React from "react";
-// import { useParams } from "react-router-dom";
-// import { useGetBookQuery } from "../api/booksApi";
-
-// const EditBook = () => {
-//   const { id } = useParams();
-//   const { data: book, isLoading, isError } = useGetBookQuery(id);
-//   if (isLoading) return <p>Loading...</p>;
-//   if (isError) return <p>Data not found!</p>;
-//   return <div>EditBook</div>;
-// };
-
-// export default EditBook;
