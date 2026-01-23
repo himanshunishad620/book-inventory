@@ -2,93 +2,73 @@
   "books": [
     {
       "id": 1,
-      "title": "The Silent Horizon",
-      "author": "Emily Carter",
-      "publishedDate": "2021-06-15",
-      "publisher": "BlueSky Publishing",
-      "coverImage": "https://via.placeholder.com/300x450.png?text=The+Silent+Horizon",
-      "overview": "A gripping novel about resilience and hope, following a journalist uncovering secrets in a near-future world."
-    },
-    {
-      "id": 2,
-      "title": "Code of Tomorrow",
-      "author": "Daniel Wright",
-      "publishedDate": "2023-02-10",
-      "publisher": "TechMind Press",
-      "coverImage": "https://via.placeholder.com/300x450.png?text=Code+of+Tomorrow",
-      "overview": "A fast-paced thriller exploring artificial intelligence, ethical hacking, and the consequences of unchecked innovation."
-    },
-    {
-      "id": 3,
-      "title": "Whispers of the Past",
-      "author": "Sophia Nguyen",
-      "publishedDate": "2019-09-01",
-      "publisher": "Riverstone Books",
-      "coverImage": "https://via.placeholder.com/300x450.png?text=Whispers+of+the+Past",
-      "overview": "A historical fiction novel weaving together family secrets, love, and memories across generations."
-    },
-    {
-      "id": 4,
-      "title": "Beyond the Stars",
-      "author": "Michael Torres",
-      "publishedDate": "2020-11-20",
-      "publisher": "Nova Realm Publishing",
-      "coverImage": "https://via.placeholder.com/300x450.png?text=Beyond+the+Stars",
-      "overview": "An epic science fiction adventure following humanity’s first mission beyond the solar system."
-    },
-    {
-      "id": 5,
-      "title": "The Hidden Path",
-      "author": "Aisha Rahman",
-      "publishedDate": "2018-04-05",
-      "publisher": "Golden Leaf Press",
-      "coverImage": "https://via.placeholder.com/300x450.png?text=The+Hidden+Path",
-      "overview": "A self-discovery journey that blends philosophy and storytelling to inspire mindful living."
-    },
-    {
-      "id": 6,
-      "title": "Echoes in the Dark",
-      "author": "Robert Miles",
-      "publishedDate": "2022-08-18",
-      "publisher": "Nightfall Books",
-      "coverImage": "https://via.placeholder.com/300x450.png?text=Echoes+in+the+Dark",
-      "overview": "A psychological thriller about a detective haunted by an unsolved case and his own past."
-    },
-    {
-      "id": 7,
-      "title": "The Art of Small Wins",
-      "author": "Laura Bennett",
-      "publishedDate": "2021-01-12",
-      "publisher": "InspireHouse",
-      "coverImage": "https://via.placeholder.com/300x450.png?text=The+Art+of+Small+Wins",
-      "overview": "A motivational book focused on building habits, achieving goals, and celebrating incremental progress."
+      "author": "George Orwell",
+      "publishedDate": "May 2024",
+      "publisher": "Secker & Warburg",
+      "overview": "A dystopian novel about totalitarianism and surveillance."
     },
     {
       "id": 8,
-      "title": "Desert Winds",
-      "author": "Omar Hassan",
-      "publishedDate": "2017-07-30",
-      "publisher": "Sandstone Publishers",
-      "coverImage": "https://via.placeholder.com/300x450.png?text=Desert+Winds",
-      "overview": "A powerful drama set in a remote desert town, exploring survival, tradition, and change."
+      "author": "Leo Tolstoy",
+      "publishedDate": "May 2024",
+      "publisher": "The Russian Messenger",
+      "overview": "A sweeping novel about Russian society."
     },
     {
-      "id": 9,
-      "title": "Digital Minds",
-      "author": "Priya Malhotra",
-      "publishedDate": "2024-03-22",
-      "publisher": "FutureScope Media",
-      "coverImage": "https://via.placeholder.com/300x450.png?text=Digital+Minds",
-      "overview": "An insightful look into the future of human-computer interaction and the rise of intelligent machines."
+      "id": 12,
+      "author": "Mary Shelley",
+      "publishedDate": "May 2024",
+      "publisher": "Lackington, Hughes, Harding, Mavor & Jones",
+      "overview": "A gothic novel about scientific ambition."
     },
     {
-      "id": 10,
-      "title": "The Last Kingdom’s Heir",
-      "author": "James Holloway",
-      "publishedDate": "2016-10-14",
-      "publisher": "IronCrown Press",
-      "coverImage": "https://via.placeholder.com/300x450.png?text=The+Last+Kingdoms+Heir",
-      "overview": "A fantasy novel filled with political intrigue, ancient magic, and a reluctant hero’s destiny."
+      "id": 13,
+      "author": "Arthur Conan Doyle",
+      "publishedDate": "May 2024",
+      "publisher": "George Newnes",
+      "overview": "A collection of Sherlock Holmes detective stories."
+    },
+    {
+      "id": 15,
+      "author": "Khaled Hosseini",
+      "publishedDate": "May 2024",
+      "publisher": "Riverhead Books",
+      "overview": "A powerful story of friendship and redemption."
+    },
+    {
+      "id": 16,
+      "author": "Gabriel García Márquez",
+      "publishedDate": "May 2024",
+      "publisher": "Editorial Sudamericana",
+      "overview": "A landmark novel of magical realism."
+    },
+    {
+      "id": 17,
+      "author": "Agatha Christie",
+      "publishedDate": "May 2024",
+      "publisher": "Collins Crime Club",
+      "overview": "A classic Hercule Poirot mystery."
+    },
+    {
+      "id": 18,
+      "author": "Chetan Bhagat",
+      "publishedDate": "May 2024",
+      "publisher": "Rupa Publications",
+      "overview": "A novel about friendship and the Indian education system."
+    },
+    {
+      "id": 19,
+      "author": "Munshi Premchand",
+      "publishedDate": "May 2024",
+      "publisher": "Lokmanya Press",
+      "overview": "A realistic portrayal of Indian society."
+    },
+    {
+      "id": 20,
+      "author": "Rabindranath Tagore",
+      "publishedDate": "May 2024",
+      "publisher": "Macmillan",
+      "overview": "A collection of deeply spiritual poems."
     }
   ]
 }
