@@ -29,7 +29,7 @@ const BookItem = (book) => {
         onClick={handleClick}
         className="flex cursor-pointer items-center justify-center"
       >
-        <img src="book.jpg" className="mt-2 h-8 w-8" />
+        <img src={book.coverImg} className="mt-2 h-8 w-8" />
       </td>
       <td
         onClick={handleClick}
@@ -41,7 +41,7 @@ const BookItem = (book) => {
         onClick={handleClick}
         className="max-w-20 cursor-pointer truncate p-0.5 text-center text-sm"
       >
-        {book.publishedDate}
+        {book.date}
       </td>
       <td
         onClick={handleClick}

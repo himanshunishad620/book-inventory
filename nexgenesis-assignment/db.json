@@ -2,73 +2,83 @@
   "books": [
     {
       "id": 1,
-      "author": "George Orwell",
-      "publishedDate": "May 2024",
-      "publisher": "Secker & Warburg",
-      "overview": "A dystopian novel about totalitarianism and surveillance."
+      "author": "John Doe",
+      "publisher": "Sunrise Publications",
+      "coverImg": "https://picsum.photos/200/300?random=1",
+      "date": "12/03/2021",
+      "overview": "An inspiring journey of self-discovery and courage."
+    },
+    {
+      "id": 2,
+      "author": "Jane Smith",
+      "publisher": "Blue Horizon",
+      "coverImg": "https://picsum.photos/200/300?random=2",
+      "date": "05/06/2020",
+      "overview": "A thrilling mystery that keeps readers on the edge."
+    },
+    {
+      "id": 3,
+      "author": "Michael Johnson",
+      "publisher": "Golden Leaf Press",
+      "coverImg": "https://picsum.photos/200/300?random=3",
+      "date": "23/11/2019",
+      "overview": "A heartfelt story of love, loss, and redemption."
+    },
+    {
+      "id": 4,
+      "author": "Emily Davis",
+      "publisher": "Aurora Books",
+      "coverImg": "https://picsum.photos/200/300?random=4",
+      "date": "14/02/2022",
+      "overview": "A captivating fantasy world full of magic and adventure."
+    },
+    {
+      "id": 5,
+      "author": "Robert Wilson",
+      "publisher": "Starline Publishing",
+      "coverImg": "https://picsum.photos/200/300?random=5",
+      "date": "01/09/2018",
+      "overview": "An investigative thriller that unravels dark secrets."
+    },
+    {
+      "id": 6,
+      "author": "Sophia Martinez",
+      "publisher": "Evergreen Press",
+      "coverImg": "https://picsum.photos/200/300?random=6",
+      "date": "30/07/2021",
+      "overview": "A guide to mindfulness and living a peaceful life."
+    },
+    {
+      "id": 7,
+      "author": "Daniel Brown",
+      "publisher": "Lighthouse Books",
+      "coverImg": "https://picsum.photos/200/300?random=7",
+      "date": "19/04/2020",
+      "overview": "A gripping historical drama set in the 19th century."
     },
     {
       "id": 8,
-      "author": "Leo Tolstoy",
-      "publishedDate": "May 2024",
-      "publisher": "The Russian Messenger",
-      "overview": "A sweeping novel about Russian society."
+      "author": "Olivia Taylor",
+      "publisher": "Sunflower Publications",
+      "coverImg": "https://picsum.photos/200/300?random=8",
+      "date": "08/12/2019",
+      "overview": "A heartwarming story of friendship and courage."
     },
     {
-      "id": 12,
-      "author": "Mary Shelley",
-      "publishedDate": "May 2024",
-      "publisher": "Lackington, Hughes, Harding, Mavor & Jones",
-      "overview": "A gothic novel about scientific ambition."
+      "id": 9,
+      "author": "William Anderson",
+      "publisher": "Moonlight Press",
+      "coverImg": "https://picsum.photos/200/300?random=9",
+      "date": "27/08/2022",
+      "overview": "A science fiction epic with interstellar adventures."
     },
     {
-      "id": 13,
-      "author": "Arthur Conan Doyle",
-      "publishedDate": "May 2024",
-      "publisher": "George Newnes",
-      "overview": "A collection of Sherlock Holmes detective stories."
-    },
-    {
-      "id": 15,
-      "author": "Khaled Hosseini",
-      "publishedDate": "May 2024",
-      "publisher": "Riverhead Books",
-      "overview": "A powerful story of friendship and redemption."
-    },
-    {
-      "id": 16,
-      "author": "Gabriel García Márquez",
-      "publishedDate": "May 2024",
-      "publisher": "Editorial Sudamericana",
-      "overview": "A landmark novel of magical realism."
-    },
-    {
-      "id": 17,
-      "author": "Agatha Christie",
-      "publishedDate": "May 2024",
-      "publisher": "Collins Crime Club",
-      "overview": "A classic Hercule Poirot mystery."
-    },
-    {
-      "id": 18,
-      "author": "Chetan Bhagat",
-      "publishedDate": "May 2024",
-      "publisher": "Rupa Publications",
-      "overview": "A novel about friendship and the Indian education system."
-    },
-    {
-      "id": 19,
-      "author": "Munshi Premchand",
-      "publishedDate": "May 2024",
-      "publisher": "Lokmanya Press",
-      "overview": "A realistic portrayal of Indian society."
-    },
-    {
-      "id": 20,
-      "author": "Rabindranath Tagore",
-      "publishedDate": "May 2024",
-      "publisher": "Macmillan",
-      "overview": "A collection of deeply spiritual poems."
+      "id": 10,
+      "author": "Emma Thomas",
+      "publisher": "Crystal Books",
+      "coverImg": "https://picsum.photos/200/300?random=10",
+      "date": "11/01/2021",
+      "overview": "A suspenseful crime story full of unexpected twists."
     }
   ]
 }

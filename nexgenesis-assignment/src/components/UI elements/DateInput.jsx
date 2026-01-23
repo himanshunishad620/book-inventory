@@ -1,9 +1,10 @@
 import React from "react";
+import { BsCalendar2Month } from "react-icons/bs";
+import { FaRegCalendar } from "react-icons/fa";
 import { FiEdit } from "react-icons/fi";
 import { LuTextCursorInput } from "react-icons/lu";
 
-const TextInput = (props) => {
-  const err = "Please enter valid details";
+const DateInput = (props) => {
   return (
     <div className="w-full">
       <label className="text-sm">{props.label}</label>
@@ -23,4 +24,4 @@ const TextInput = (props) => {
   );
 };
 
-export default TextInput;
+export default DateInput;
