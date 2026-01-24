@@ -1,12 +1,16 @@
+
+[build]
+  publish = "dist"
+  command = "npm run build"
+
 [build.environment]
   NODE_VERSION = "18"
-  
-[build]
-  command = "npm run build"
-  publish = "dist"
 
-# SPA routing (React Router)
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+# For functions (if you need them)
+[functions]
+  directory = "netlify/functions/"
