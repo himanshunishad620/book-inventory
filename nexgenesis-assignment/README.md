@@ -1,7 +1,7 @@
-![Home Page](src/assets/homepage.jpg)
-![Add Book](src/assets/addbook.jpg)
-![Update Book](src/assets/updatebook.jpg)
-![Book Details](src/assets/bookdetails.jpg)
+![Home Page](src/assets/homepage.png)
+![Add Book](src/assets/addbook.png)
+![Update Book](src/assets/updatebook.png)
+![Book Details](src/assets/bookdetails.png)
 
 #### 🔗 Links
 
