@@ -2,7 +2,7 @@
 
 #### 🔗 Links
 
-[Take a preview](https://eloquent-cobbler-9eafa7.netlify.app/)
+[Take a preview](https://nexgenesisassignment.netlify.app/)
 
 # Book Inventory Management System
 
