@@ -1,6 +1,11 @@
-![Preview](src/assets/book.jpg)
+![Home Page](src/assets/homepage.jpg)
+![Add Book](src/assets/addbook.jpg)
+![Update Book](src/assets/updatebook.jpg)
+![Book Details](src/assets/bookdetails.jpg)
 
 #### 🔗 Links
+
+[Take a preview](https://eloquent-cobbler-9eafa7.netlify.app/)
 
 # Book Inventory Management System
 
@@ -78,7 +83,15 @@ or
 yarn
 ```
 
-### 4. Start the development server
+### 4 Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+> **Note:** This is a public project created for demonstration purposes. The real API is included to showcase full functionality.
+
+`VITE_API_URL`=https://json-server-deployment-3wy6.onrender.com/
+
+### 5. Start the development server
 
 ```bash
 npm start
@@ -90,7 +103,7 @@ or
 yarn start
 ```
 
-### 5.Open in Browser
+### 6.Open in Browser
 
 ```bash
 http://localhost:3000

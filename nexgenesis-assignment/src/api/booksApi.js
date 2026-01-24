@@ -1,16 +1,9 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-
 const booksApi = createApi({
   reducerPath: "booksApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://json-server-deployment-3wy6.onrender.com/",
+    baseUrl: import.meta.env.VITE_API_URL,
   }),
-  fetchFn: (input, init) => {
-    return fetch(input, {
-      ...init,
-      targetAddressSpace: "private", // 👈 This triggers the permission popup
-    });
-  },
   tagTypes: ["Books"],
   endpoints: (builder) => ({
     //Get all books
