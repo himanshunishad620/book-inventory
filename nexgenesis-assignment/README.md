@@ -1,4 +1,4 @@
-![Preview](assets/book.jpg)
+![Preview](src/assets/book.jpg)
 
 #### 🔗 Links
 
