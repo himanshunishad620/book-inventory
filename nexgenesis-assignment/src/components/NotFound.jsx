@@ -1,4 +1,3 @@
-import React from "react";
 import { TbMoodSadDizzy } from "react-icons/tb";
 
 const NotFound = () => {

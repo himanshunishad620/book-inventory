@@ -42,7 +42,6 @@ const EditBook = () => {
   useEffect(() => {
     if (book) updateValues(book);
   }, [book]);
-  if (isError) return <p>Data not found!</p>;
   return (
     <div className="flex h-full w-full flex-col items-center justify-center gap-5 bg-white">
       {/* Update book form  */}

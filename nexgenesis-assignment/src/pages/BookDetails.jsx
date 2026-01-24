@@ -15,7 +15,6 @@ const BookDetails = () => {
         <div className="mb-0 h-1/10 md:mb-5">
           <Title text="Book Details" />
         </div>
-
         {/* {book && ( */}
         <div className="flex h-8/10 w-full flex-col md:flex-row">
           <div className="flex aspect-square h-full w-full items-center justify-center bg-[#f5f5f5] md:w-1/2">
