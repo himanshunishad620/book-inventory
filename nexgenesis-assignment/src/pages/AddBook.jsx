@@ -34,6 +34,7 @@ const AddBook = () => {
 
   return (
     <div className="flex h-full w-full flex-col items-center justify-center gap-5 bg-white">
+      {/* Add book form  */}
       <form
         onSubmit={handleSubmit}
         className="w-9/10 rounded-xl border-2 border-gray-300 p-5 md:w-4/5 md:p-10"

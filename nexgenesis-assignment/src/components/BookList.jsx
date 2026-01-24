@@ -4,6 +4,8 @@ import BookItem from "./BookItem";
 import { Link } from "react-router-dom";
 import SearchInput from "./UI elements/SearchInput";
 import { useMemo, useState } from "react";
+import Loading from "./Loading";
+import NotFound from "./NotFound";
 
 const BookList = () => {
   const { data, isLoading } = useGetBooksQuery();
@@ -25,6 +27,7 @@ const BookList = () => {
 
   return (
     <div className="no-scrollbar h-screen w-full">
+      {/* Search bar */}
       <div className="flex h-1/11 items-center justify-between px-4">
         <SearchInput
           placeholder="Search by author or publisher..."
@@ -36,12 +39,11 @@ const BookList = () => {
         </Link>
       </div>
 
+      {/* Book list */}
       <div className="h-9/10 overflow-y-scroll">
-        {isLoading && <p className="text-3xl text-red-600">Loading...</p>}
-        {!isLoading && filteredBooks.length === 0 && (
-          <p className="p-4 text-center text-gray-500">No books found</p>
-        )}
-
+        {isLoading && <Loading />}
+        {!isLoading && filteredBooks.length === 0 && <NotFound />}
+        {/* Book list table  */}
         {filteredBooks.length > 0 && (
           <table className="w-full border-collapse">
             <thead className="sticky top-0 bg-[#624DE3]">

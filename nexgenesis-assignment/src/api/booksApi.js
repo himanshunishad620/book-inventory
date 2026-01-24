@@ -5,14 +5,19 @@ const booksApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3000/" }),
   tagTypes: ["Books"],
   endpoints: (builder) => ({
+    //Get all books
     getBooks: builder.query({
       query: () => "books",
       providesTags: ["Books"],
     }),
+
+    //Get book by id
     getBook: builder.query({
       query: (bookId) => `books/${bookId}`,
       providesTags: ["Books"],
     }),
+
+    //Remove Book mutation
     removeBook: builder.mutation({
       query: (bookId) => ({
         url: `books/${bookId}`,
@@ -20,6 +25,8 @@ const booksApi = createApi({
       }),
       invalidatesTags: ["Books"],
     }),
+
+    //Update book mutation
     updateBook: builder.mutation({
       query: (book) => ({
         url: `books/${book.id}`,
@@ -28,6 +35,8 @@ const booksApi = createApi({
       }),
       invalidatesTags: ["Books"],
     }),
+
+    // Add book mutation
     addBook: builder.mutation({
       query: (book) => ({
         url: `books`,
