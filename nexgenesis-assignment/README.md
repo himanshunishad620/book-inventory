@@ -1,16 +1,97 @@
-# React + Vite
+![Preview](assets/book.jpg)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### 🔗 Links
 
-Currently, two official plugins are available:
+# Book Inventory Management System
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The Book Inventory Management System is a web application built using React that allows users to efficiently manage a collection of books. It provides a user-friendly interface for performing CRUD (Create, Read, Update, Delete) operations on the inventory of books. The application fetches book data dynamically from an API and displays it on the landing page, allowing users to view detailed information about individual books with ease.
 
-## React Compiler
+## Features
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+1. **Landing Page / Home Page**
+   - Displays a list of all books available in the inventory.
+   - Shows a summary of each book's information, including the **publisher**, **published date**, **author**, **cover Image** and others.
+   - Provides access to **CRUD operations** directly from the landing page.
+2. **API Integration**
+   - Fetches book data dynamically using an API.
+   - Ensures the inventory is always up-to-date with the latest collection.
 
-## Expanding the ESLint configuration
+3. **Book Details Page**
+   - Clicking on a book redirects to a **details page**.
+   - Displays comprehensive information such as **author name, published date, publisher**, and an **overview of the book's content**.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+4. **Responsive and Interactive Design**
+   - Fully responsive and adapts seamlessly to different screen sizes and devices.
+   - Provides an interactive, user-friendly experience for easy navigation and action.
+
+5. **Table Display**
+   - Data is presented in **organized tables** for clear readability and management.
+
+6. **Scrollable Pages**
+   - Long lists of books and detailed information are **scrollable**, improving accessibility and usability.
+
+7. **Data Validation**
+   - Ensures that user inputs are **properly validated** to maintain data integrity and prevent errors.
+8. **API Loading State**
+
+- Displays a loading indicator while fetching data from the API.
+- Enhances user experience by showing feedback when the content is being loaded.
+
+9. **React Toastify Notifications**
+
+- Provides real-time feedback for user actions such as adding, updating, or deleting a book.
+- Displays success, error, or warning messages in a user-friendly toast popup.
+- Improves interactivity and keeps users informed about the status of their actions.
+
+## Tech Stack
+
+1. **Frontend:** React, Tailwind CSS, React Icons, Toastify
+2. **API Integration:** RTK Query
+3. **State Management:** Redux Toolkit, React Hooks (useState, useEffect)
+4. **Backend:** JSON-Server / Render
+
+## Running the Project Locally
+
+Follow these steps to set up and run the **Book Inventory Management System** on your local machine.
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/book-inventory.git
+```
+
+### 2. Navigate to the project folder
+
+```bash
+cd book-inventory
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+or
+
+```bash
+yarn
+```
+
+### 4. Start the development server
+
+```bash
+npm start
+```
+
+or
+
+```bash
+yarn start
+```
+
+### 5.Open in Browser
+
+```bash
+http://localhost:3000
+```
