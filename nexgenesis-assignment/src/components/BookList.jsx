@@ -50,7 +50,7 @@ const BookList = () => {
               <tr>
                 <th className="p-2 text-center text-white">Cover</th>
                 <th className="p-2 text-center text-white">Author</th>
-                <th className="p-2 text-center text-white">Published</th>
+                <th className="p-2 text-center text-white">Date</th>
                 <th className="p-2 text-center text-white">Publisher</th>
                 <th className="p-2 text-center text-white">Actions</th>
               </tr>

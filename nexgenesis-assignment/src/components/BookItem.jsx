@@ -7,7 +7,7 @@ import { formatMonthYear } from "../helper/date";
 import { toast } from "react-toastify";
 
 const BookItem = (book) => {
-  const [removeBook] = useRemoveBookMutation();
+  const [removeBook, { isLoading }] = useRemoveBookMutation();
   const navigate = useNavigate();
 
   const handleClick = () => navigate(`book/${book.id}`);
@@ -49,14 +49,16 @@ const BookItem = (book) => {
         {book.publisher}
       </td>
       <td className="p-1 text-right">
-        <div className="flex justify-center gap-1.5 px-1 md:px-3">
+        <div className="flex justify-center gap-0 px-0 md:gap-1.5 md:px-3">
           <IconButton
             onClick={handleEdit}
             icon={<FiEdit color={"#624DE3"} fontSize={20} />}
           />
           <IconButton
+            isLoading={isLoading}
+            disabled={isLoading}
             onClick={handleRemoveBook}
-            icon={<LuTrash2 color={"red"} fontSize={22} />}
+            icon={<LuTrash2 color={"red"} fontSize={20} />}
           />
         </div>
       </td>

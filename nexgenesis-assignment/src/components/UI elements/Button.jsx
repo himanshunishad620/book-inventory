@@ -1,4 +1,5 @@
 import React from "react";
+import { ImSpinner3 } from "react-icons/im";
 
 const Button = (props) => {
   return (
@@ -10,9 +11,13 @@ const Button = (props) => {
         type={props.type}
         disabled={props.disabled}
         isLoading={props.isLoading}
-        className="h-full w-full cursor-pointer justify-center px-5 py-2 font-medium text-white"
+        className="flex h-full w-full cursor-pointer items-center justify-center px-5 py-2 font-medium text-white"
       >
-        {props.isLoading ? "Loading..." : props.text}
+        {props.isLoading ? (
+          <ImSpinner3 size={20} className="animate-spin" />
+        ) : (
+          props.text
+        )}
       </button>
     </div>
   );

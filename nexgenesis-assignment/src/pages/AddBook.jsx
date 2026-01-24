@@ -84,7 +84,7 @@ const AddBook = () => {
           onChange={handleChange}
         />
         <div className="my-2">
-          <Button text={"Submit"} disabled={isLoading} isLoading={false} />
+          <Button text={"Submit"} disabled={isLoading} isLoading={isLoading} />
         </div>
       </form>
     </div>
