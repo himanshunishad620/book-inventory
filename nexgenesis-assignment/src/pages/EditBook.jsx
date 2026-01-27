@@ -18,7 +18,7 @@ const EditBook = () => {
     isLoading: isBookLoading,
     isError,
   } = useGetBookQuery(bookid);
-  const [updateBook, { data, isLoading, isSuccess }] = useUpdateBookMutation();
+  const [updateBook, { isLoading, isSuccess }] = useUpdateBookMutation();
   const { handleChange, error, values, updateValues, validate } = useHandleForm(
     {
       title: "",
@@ -35,7 +35,7 @@ const EditBook = () => {
     try {
       await updateBook(values).unwrap();
     } catch (err) {
-      toast.error("Unable to proceed!");
+      toast.error("Unable to process request!");
     }
   };
   useEffect(() => {

@@ -8,11 +8,6 @@ export default function useHandleForm(initialValues) {
   const updateValues = (obj) => setValues({ ...obj });
 
   const validate = () => {
-    // if (
-    //   Object.values(error).every(
-    //     (value) => value === undefined || value === null,
-    //   )
-    // ) {
     let flag = true;
     let newError = {};
     for (let each in values)
@@ -22,8 +17,6 @@ export default function useHandleForm(initialValues) {
       }
     setError({ ...newError });
     return flag;
-    // }
-    // return Object.values(error).every((value) => value === "");
   };
 
   const handleChange = (e) => {

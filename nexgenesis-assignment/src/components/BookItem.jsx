@@ -18,7 +18,7 @@ const BookItem = (book) => {
       await removeBook(book.id).unwrap();
       toast.success("Book Removed Successfuly!");
     } catch (error) {
-      toast.error("Unable to proess request!");
+      toast.error("Unable to process request!");
     }
   };
 
