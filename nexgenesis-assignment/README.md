@@ -59,7 +59,7 @@ Follow these steps to set up and run the **Book Inventory Management System** on
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/book-inventory.git
+git clone https://github.com/himanshunishad620/book-inventory.git
 ```
 
 ### 2. Navigate to the project folder
