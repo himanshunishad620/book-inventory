@@ -2,7 +2,7 @@
 
 #### 🔗 Links
 
-[Take a preview](https://nexgenesisassignment.netlify.app/)
+[Take a preview](https://nexgensis-assignment.netlify.app/)
 
 # Book Inventory Management System
 
@@ -103,5 +103,5 @@ yarn start
 ### 6.Open in Browser
 
 ```bash
-http://localhost:3000
+http://localhost:5173
 ```
