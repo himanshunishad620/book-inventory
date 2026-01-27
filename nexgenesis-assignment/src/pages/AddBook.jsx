@@ -6,7 +6,9 @@ import useHandleForm from "../hooks/useHandleForm";
 import DateInput from "../components/UI elements/DateInput";
 import { useAddBookMutation } from "../api/booksApi";
 import { toast } from "react-toastify";
+import Success from "../components/UI elements/Success";
 const initialValues = {
+  title: undefined,
   author: undefined,
   publisher: undefined,
   coverImg: undefined,
@@ -14,32 +16,38 @@ const initialValues = {
   overview: undefined,
 };
 const AddBook = () => {
-  const [addBook, { isLoading }] = useAddBookMutation();
-  const { handleChange, error, values, validate } =
+  const [addBook, { isLoading, isSuccess }] = useAddBookMutation();
+  const { handleChange, error, values, validate, updateValues } =
     useHandleForm(initialValues);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!validate()) {
-      toast.error("Values cannot be empty!");
-      return;
-    }
+    if (!validate()) return;
     try {
       await addBook(values).unwrap();
-      toast.success("Book Added Successfuly!");
     } catch (error) {
       toast.error("Unable to process the request!");
     }
   };
-
+  if (isSuccess) return <Success />;
   return (
     <div className="flex h-full w-full flex-col items-center justify-center gap-5 bg-white">
       {/* Add book form  */}
       <form
         onSubmit={handleSubmit}
-        className="w-9/10 rounded-xl border-2 border-gray-300 p-5 md:w-4/5 md:p-10"
+        className="w-9/10 rounded-xl border-2 border-gray-300 p-5 shadow-[0_0_20px_rgba(0,0,0,0.15)] md:w-4/5 md:p-10"
       >
-        <Title text="Add Book" />
+        <div className="flex justify-center">
+          <Title text="Add Book" />
+        </div>
+        <TextInput
+          placeholder="e.g. Rich Dad, Poor Dad"
+          value={values.title}
+          name="title"
+          error={error.title}
+          onChange={handleChange}
+          label="Title"
+        />
         <div className="flex w-full flex-col justify-between gap-0 md:flex-row md:gap-3">
           <TextInput
             placeholder="e.g. John Doe"
@@ -79,6 +87,7 @@ const AddBook = () => {
         <TextArea
           label="Overview"
           name="overview"
+          placeholder="Summary of book"
           value={values.overview}
           error={error.overview}
           onChange={handleChange}

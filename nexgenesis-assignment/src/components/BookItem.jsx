@@ -32,7 +32,13 @@ const BookItem = (book) => {
       </td>
       <td
         onClick={handleClick}
-        className="h-12 max-w-20 cursor-pointer truncate pl-3 text-sm md:pl-6"
+        className="h-12 max-w-20 cursor-pointer truncate text-sm md:pl-6"
+      >
+        {book.title}
+      </td>
+      <td
+        onClick={handleClick}
+        className="max-w-20 cursor-pointer truncate p-0.5 pl-3 text-sm md:pl-8"
       >
         {book.author}
       </td>
@@ -41,12 +47,6 @@ const BookItem = (book) => {
         className="max-w-20 cursor-pointer truncate p-0.5 text-center text-sm"
       >
         {formatMonthYear(book.date)}
-      </td>
-      <td
-        onClick={handleClick}
-        className="max-w-20 cursor-pointer truncate p-0.5 text-sm"
-      >
-        {book.publisher}
       </td>
       <td className="p-1 text-right">
         <div className="flex justify-center gap-0 px-0 md:gap-1.5 md:px-3">

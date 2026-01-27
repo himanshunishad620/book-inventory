@@ -1,61 +1,53 @@
-import Title from "../components/UI elements/Title";
 import { useParams } from "react-router-dom";
 import { useGetBookQuery } from "../api/booksApi";
-import { formatMonthYear } from "../helper/date";
 import NotFound from "../components/NotFound";
 import Loading from "../components/Loading";
+import Title from "../components/UI elements/Title";
 
 const BookDetails = () => {
   const { bookid } = useParams();
   const { data: book, isError, isLoading } = useGetBookQuery(bookid);
   if (isError) return <NotFound />;
   return (
-    <div className="flex h-dvh w-full flex-col items-center justify-center gap-5 bg-white">
-      <div className="w-9/10 rounded-xl border-2 border-gray-300 p-5 md:w-4/5 md:p-10">
-        <div className="mb-0 h-1/10 md:mb-5">
-          <Title text="Book Details" />
-        </div>
-        {/* {book && ( */}
-        <div className="flex h-8/10 w-full flex-col md:flex-row">
-          <div className="flex aspect-square h-full w-full items-center justify-center bg-[#f5f5f5] md:w-1/2">
-            {!book && isLoading && <Loading />}
-            {book && (
+    <div className="flex h-full items-center justify-center bg-white">
+      <div className="mx-auto flex w-3xl px-4 py-5">
+        {!book && isLoading && <Loading />}
+        {book && (
+          <div className="grid grid-cols-1 gap-10 rounded-2xl border-2 border-gray-300 bg-white p-6 shadow-[0_0_20px_rgba(0,0,0,0.15)] md:grid-cols-2 md:p-10">
+            {/* book cover image */}
+            <div className="flex justify-center">
               <img
-                className="max-h-full max-w-full"
                 src={book.coverImg}
-                alt=""
+                alt={book.title || "Book cover"}
+                className="h-80 w-60 rounded-xl object-cover shadow-md"
               />
-            )}
-          </div>
-          <div className="items-left flex h-full w-full flex-col justify-between bg-[#f5f5f5] p-5 md:w-1/2 md:p-12">
-            {!book && isLoading && <Loading />}
-            {book && (
-              <>
+            </div>
+
+            {/* book info */}
+            <div>
+              <Title text={book.title} />
+              <p className="text-gray-600">
+                by <span className="font-semibold">{book.author}</span>
+              </p>
+              <div className="mt-4 text-sm text-gray-700">
                 <p>
-                  <b>Author : </b>
-                  {book.author}
-                </p>
-                <p>
-                  <b>Publisher : </b>
+                  <span className="font-medium">Publisher:</span>{" "}
                   {book.publisher}
                 </p>
                 <p>
-                  <b>Published On : </b>
-                  {formatMonthYear(book.date)}
+                  <span className="font-medium">Published on:</span> {book.date}
                 </p>
                 <p>
-                  <b>Book Id : </b>
-                  {book.id}
+                  <span className="font-medium">Book Id:</span> {book.id}
                 </p>
-                <p>
-                  <b>Overview : </b>
-                  {book.overview}
-                </p>
-              </>
-            )}
+              </div>
+              <div className="mt-3">
+                <h3 className="text-md mb-2 font-semibold">Overview</h3>
+                <p className="text-sm text-gray-700">{book.overview}</p>
+              </div>
+            </div>
           </div>
-        </div>
-        {/* )} */}
+        )}
       </div>
     </div>
   );

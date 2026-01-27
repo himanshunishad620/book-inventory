@@ -16,12 +16,12 @@ const BookList = () => {
   const filteredBooks = useMemo(() => {
     if (!data) return [];
     if (!query.trim()) return data;
-
+    console.log(query);
     const q = query.toLowerCase();
     return data.filter(
       (book) =>
         book.author.toLowerCase().includes(q) ||
-        book.publisher.toLowerCase().includes(q),
+        book.title.toLowerCase().includes(q),
     );
   }, [data, query]);
 
@@ -30,7 +30,7 @@ const BookList = () => {
       {/* Search bar */}
       <div className="flex h-1/11 items-center justify-between px-4">
         <SearchInput
-          placeholder="Search by author or publisher..."
+          placeholder="Author or Title"
           value={query}
           onChange={handleChange}
         />
@@ -49,9 +49,9 @@ const BookList = () => {
             <thead className="sticky top-0 bg-[#624DE3]">
               <tr>
                 <th className="p-2 text-center text-white">Cover</th>
+                <th className="p-2 text-center text-white">Title</th>
                 <th className="p-2 text-center text-white">Author</th>
                 <th className="p-2 text-center text-white">Date</th>
-                <th className="p-2 text-center text-white">Publisher</th>
                 <th className="p-2 text-center text-white">Actions</th>
               </tr>
             </thead>
