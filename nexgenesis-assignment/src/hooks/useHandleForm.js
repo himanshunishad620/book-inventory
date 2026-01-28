@@ -8,15 +8,13 @@ export default function useHandleForm(initialValues) {
   const updateValues = (obj) => setValues({ ...obj });
 
   const validate = () => {
-    let flag = true;
     let newError = {};
     for (let each in values)
-      if (!values[each]) {
-        flag = false;
-        newError[each] = `${each} is required!`;
-      }
-    setError({ ...newError });
-    return flag;
+      if (!values[each]) newError[each] = `${each} is required!`;
+    let temp = { ...error, ...newError };
+    setError({ ...temp });
+    for (let each in temp) if (temp[each]) return false;
+    return true;
   };
 
   const handleChange = (e) => {
